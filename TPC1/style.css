@@ -1,0 +1,170 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 25px;
+    color: whitesmoke;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    margin: 0 40px;
+    font-family: 'Poppins';
+    color: whitesmoke;
+}
+
+.nav-links li a:hover{
+    font-size:larger;
+}
+
+
+
+/* Header */
+header {
+    width: 100vw;
+    height: 110vh;
+    background-image: url('img/331116.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ajuda {
+    padding: 8px 15px;
+    background: green;
+    border-radius: 20px;
+    color:  whitesmoke;
+}
+
+
+/* Sobre */
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 3vmin;
+    color: rgb(2, 59, 2);
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.line {
+    width: 200px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgba(39, 39, 3, 0.928);
+    margin: 10px auto;
+}
+
+.line_smaller {
+    width: 150px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgba(39, 39, 3, 0.928);
+    margin: 10px auto;
+}
+
+.sobre p{
+    text-align: justify;
+    padding: 5px;
+    font-family: 'Poppins';
+    color:rgb(22, 1, 1);
+}
+
+/* Factos */
+
+.factos{
+    text-align: justify;
+    padding: 5px;
+    font-family: 'Poppins';
+    color:rgb(22, 1, 1);
+}
+
+.factos li{
+    padding: 15px;
+}
+
+
+
+
+/* Como identificar */
+
+.not{
+    color: red;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.row{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+}
+
+.column{
+    width: 100%;
+    height: 400px;
+    margin: 50px;
+}
+
+.column img{
+    width: 100%;
+    height: 100%;
+}
+
+.column h4{
+    text-align: center;
+}
+
+
+/* Ajuda */
+.column p{
+    text-align: justify;
+    padding: 5px;
+    font-family: 'Poppins';
+    color:rgb(22, 1, 1);
+    margin-top: 30px;    
+    margin-left: 30px;
+}
+
+footer {
+    background-color: rgb(2, 59, 2);
+    color: whitesmoke;
+    font-family: 'Poppins';
+    padding: 15px;
+    text-align: center;
+    font-size: 2vmin;
+}
+
+.fa-solid{
+    color:red;
+}
