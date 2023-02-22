@@ -43,7 +43,7 @@ pagHTML = """
 """
 
 for c in cidades:
-    pagHTML += f"<li><a href='#{c['nome']}'>{c['nome']}</a></li>"
+    pagHTML += f"<li><a href='{c['id']}'>{c['nome']}</a></li>"
 
 pagHTML += """
 </ol>
@@ -63,7 +63,7 @@ for c in cidades:
             <meta charset="UTF-8"/>
             </head>
             <body>
-                <a name="{c['nome']}"/>
+                <a name="{c['id']}"/>
                 <h1>{c['nome']}</h1>"""               
 
     cidadeHTML += f"""
@@ -75,20 +75,20 @@ for c in cidades:
         cidadeHTML += """<h4>Ligações</h4>"""
         for list in mapLocations[c['id']]:
             cidadeHTML += f""" 
-                    <p><a href='#{list['destino']}'>{mapCidades[list['destino']]}</a>: {list['distância']}</p>    
+                    <p><a href='{list['destino']}'>{mapCidades[list['destino']]}</a>: {list['distância']}</p>    
             """
                     
                     
                     
     cidadeHTML += """
-                    <address>[<a href="#indice">Voltar ao índice</a>]</address>    
+                    <address>[<a href="/">Voltar ao índice</a>]</address>    
     """
            
     cidadeHTML += """
     </body>
     </html>
     """
-    file = open(c['nome']+".html", "w")
+    file = open(c['id']+".html", "w")
     file.write(cidadeHTML)
     file.close()
 
