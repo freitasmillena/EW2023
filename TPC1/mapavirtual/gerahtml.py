@@ -97,8 +97,7 @@ pagHTML += """
 
 
 
-for i in range(1,3):
-    file = open("mapa" + str(i) + ".html", "w")
-    file.write(pagHTML)
-    file.close()
+file = open("mapa.html", "w")
+file.write(pagHTML)
+file.close()
 
