@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    background-color: rgb(251, 205, 240);
+    color: whitesmoke;
+    font-family: 'Poppins';
+}
+
+.card {
+    background-color: rgb(82, 16, 64);
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+h1, h2, li {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.line {
+    margin-top: -10px;
+    width: 400px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(251, 205, 240);
+    border-color:  rgb(251, 205, 240);
+}
+
+.line_last{
+    margin-top: 35px;
+    width: 400px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(251, 205, 240);
+    border-color:  rgb(251, 205, 240);
+}
+
+.line_smaller {
+    margin-top: -10px;
+    margin-bottom: 25px;
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: rgb(251, 205, 240);
+    border-color:  rgb(251, 205, 240);
+}
+
+h2{
+    margin-top: 50px;
+}
+
+a, a:visited, a:active {
+    color: whitesmoke;
+    text-decoration: none;
+}
+    
+a:hover {
+    font-size: larger;
+    color: rgb(251, 205, 240);
+    text-decoration: none;
+}  
+
+.nav p {
+    display: inline-block;
+}
+
+p {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.nav {
+    text-align: center;    
+}
+
+
+address {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.desc {
+    text-align: justify;
+}
