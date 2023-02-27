@@ -1,16 +1,17 @@
 import json
+import locale
 
+locale.setlocale(locale.LC_ALL,"")
 
 def ordCidade(cidade):
-    return cidade['nome']
+    return locale.strxfrm(cidade['nome'])
 
-def ordDistrito(distrito):
-    return distrito
 
 f = open("mapa.json")
 mapa = json.load(f)
 cidades = mapa['cidades']
 cidades.sort(key=ordCidade)
+#print(cidades)
 locations = mapa['ligações']
 distritos = {} #chave - distrito, valor - id da cidade
 mapCidades = {}
@@ -31,7 +32,7 @@ for l in locations:
     mapLocations[l['origem']].append(l)
 
 distritoslist = list(distritos.keys())
-distritoslist.sort()
+distritoslist.sort(key=locale.strxfrm)
 
 
 pagHTML = """
@@ -47,10 +48,10 @@ pagHTML = """
             <!--Índice-->
             <hr class="line">
             <div class="nav">
-                <p><a href="#Aveiro">Aveiro</a></p><p><a href="#Beja">Beja</a></p><p><a href="#Braga">Braga</a></p><p><a href="#Bragança">Bragança</a></p><p><a href="#Castelo Branco">Castelo Branco</a></p><p><a href="#Coimbra">Coimbra</a></p><p><a href="#Faro">Faro</a></p><p><a href="#Guarda">Guarda</a></p><p><a href="#Leiria">Leiria</a></p><p><a href="#Lisboa">Lisboa</a></p>
+                <p><a href="#Aveiro">Aveiro</a></p><p><a href="#Beja">Beja</a></p><p><a href="#Braga">Braga</a></p><p><a href="#Bragança">Bragança</a></p><p><a href="#Castelo Branco">Castelo Branco</a></p><p><a href="#Coimbra">Coimbra</a></p><p><a href="#Évora">Évora</a></p><p><a href="#Faro">Faro</a></p><p><a href="#Guarda">Guarda</a></p><p><a href="#Leiria">Leiria</a></p>
             </div>
             <div class="nav last">
-                <p><a href="#Portalegre">Portalegre</a></p><p><a href="#Porto">Porto</a></p><p><a href="#Santarém">Santarém</a></p><p><a href="#Setúbal">Setúbal</a></p><p><a href="#Viana do Castelo">Viana do Castelo</a></p><p><a href="#Vila Real">Vila Real</a></p><p><a href="#Viseu">Viseu</a></p><p><a href="#Évora">Évora</a></p>
+                <p><a href="#Lisboa">Lisboa</a></p><p><a href="#Portalegre">Portalegre</a></p><p><a href="#Porto">Porto</a></p><p><a href="#Santarém">Santarém</a></p><p><a href="#Setúbal">Setúbal</a></p><p><a href="#Viana do Castelo">Viana do Castelo</a></p><p><a href="#Vila Real">Vila Real</a></p><p><a href="#Viseu">Viseu</a></p>
             </div>
              
 """
