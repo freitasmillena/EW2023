@@ -77,60 +77,59 @@ file = open("index.html", "w")
 file.write(pagHTML)
 file.close()
 
-#for c in cidades:
-#    cidadeHTML = f"""
-#    <!DOCTYPE html>
-#        <html>
-#            <head>
-#            <title>{c['nome']}</title>
-#            <meta charset="UTF-8"/>
-#            </head>
-#            <body>
-#                <div class="card">
-#                <a name="{c['id']}"></a>
-#                <h1>{c['nome']}</h1>
-#                <hr class="line">
-#                <div class="nav">
-#                    <p><a href="#Distrito">Distrito</a></p><p><a href="#Pop">População</a></p><p><a href="#Desc">Descrição</a></p><p><a href="#Lig">Ligações</a></p>
-#                </div>
-#                """               
-#
-#    cidadeHTML += f"""
-#                    <a name="Distrito"></a>
-#                    <h2><b>Distrito</b></h2>
-#                    <hr class="line_smaller">
-#                    <p>{c['distrito']}</p>
-#                    
-#                    <a name="Pop"></a>
-#                    <h2><b>População</b></h2> 
-#                    <hr class="line_smaller">
-#                    <p>{c['população']}</p>
-#                    
-#                    <a name="Desc"></a>
-#                    <h2><b>Descrição</b></h2>
-#                    <hr class="line_smaller">
-#                    <p>{c['descrição']}</p>
-#                    """
-#    if c['id'] in mapLocations:
-#        cidadeHTML += """
-#                    <a name="Lig"></a>
-#                    <h2>Ligações</h2> 
-#                    <hr class="line_smaller">"""
-#        for list in mapLocations[c['id']]:
-#            cidadeHTML += f""" 
-#                    <p><a href='{list['destino']}'>{mapCidades[list['destino']]['nome']}</a>: {list['distância']}</p>    
-#            """
-#                    
-#                    
-#                    
-#    cidadeHTML += """
-#                    <hr class="line_last">
-#                    <address>[<a href="/">Voltar ao índice</a>]</address>    
-#                </div>
-#        </body>
-#    </html>
-#    """
-#    file = open("./cidades/"+c['id']+".html", "w")
-#    file.write(cidadeHTML)
-#    file.close()
-#
+for c in cidades:
+    cidadeHTML = f"""
+    <!DOCTYPE html>
+        <html>
+            <head>
+            <title>{c['nome']}</title>
+            <meta charset="UTF-8"/>
+            </head>
+            <body>
+                <div class="card">
+                <a name="{c['id']}"></a>
+                <h1>{c['nome']}</h1>
+                <hr class="line">
+                <div class="nav">
+                    <p><a href="#Distrito">Distrito</a></p><p><a href="#Pop">População</a></p><p><a href="#Desc">Descrição</a></p><p><a href="#Lig">Ligações</a></p>
+                </div>
+                """               
+
+    cidadeHTML += f"""
+                    <a name="Distrito"></a>
+                    <h2><b>Distrito</b></h2>
+                    <hr class="line_smaller">
+                    <p>{c['distrito']}</p>
+                    
+                    <a name="Pop"></a>
+                    <h2><b>População</b></h2> 
+                    <hr class="line_smaller">
+                    <p>{c['população']}</p>
+                    
+                    <a name="Desc"></a>
+                    <h2><b>Descrição</b></h2>
+                    <hr class="line_smaller">
+                    <p>{c['descrição']}</p>
+                    """
+    if c['id'] in mapLocations:
+        cidadeHTML += """
+                    <a name="Lig"></a>
+                    <h2>Ligações</h2> 
+                    <hr class="line_smaller">"""
+        for list in mapLocations[c['id']]:
+            cidadeHTML += f""" 
+                    <p><a href='{list['destino']}'>{mapCidades[list['destino']]['nome']}</a>: {list['distância']}</p>    
+            """
+                    
+                    
+                    
+    cidadeHTML += """
+                    <hr class="line_last">
+                    <address>[<a href="/">Voltar ao índice</a>]</address>    
+                </div>
+        </body>
+    </html>
+    """
+    file = open("./cidades/"+c['id']+".html", "w")
+    file.write(cidadeHTML)
+    file.close()
