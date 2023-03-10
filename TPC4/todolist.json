@@ -1,0 +1,90 @@
+{
+  "tasks": [
+    {
+      "id": "2",
+      "what": "Fazer o TPC 4 de PL",
+      "who": "Rita Vaz",
+      "dueDate": "2023-03-12"
+    },
+    {
+      "id": "3",
+      "what": "Fazer o TPC 4 de Eng Web",
+      "who": "Millena Freitas",
+      "dueDate": "2023-03-14",
+      "done": 1,
+      "date": "2023-03-10"
+    },
+    {
+      "id": "4",
+      "what": "Estudar IPM",
+      "who": "Ricardo Oliveira",
+      "dueDate": "2023-03-18"
+    },
+    {
+      "id": "5",
+      "what": "Fazer o relatório de CG",
+      "who": "Millena Freitas",
+      "dueDate": "2023-03-10",
+      "done": 1,
+      "date": "2023-03-10"
+    },
+    {
+      "id": "6",
+      "what": "Fazer o TPC 4 de PL",
+      "who": "Millena Freitas",
+      "dueDate": "2023-03-16"
+    },
+    {
+      "id": "7",
+      "what": "Fazer o TPC3 de PL",
+      "who": "Vasco Oliveira",
+      "dueDate": "2023-03-09",
+      "done": 1,
+      "date": "2023-03-10"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Millena Freitas",
+      "occupation": "student",
+      "email": "freitasmillena27@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Rita Vaz",
+      "occupation": "student",
+      "email": "anarita02@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Vasco Oliveira",
+      "occupation": "student",
+      "email": "manuelinho2002@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "Ricardo Oliveira",
+      "occupation": "aaaaaaaaaaaa",
+      "email": "aaaa@aaa.aa"
+    },
+    {
+      "id": "5",
+      "name": "Rafael Cunha",
+      "occupation": "Finances",
+      "email": "rafa@gmail.com"
+    },
+    {
+      "id": "6",
+      "name": "Rosa",
+      "occupation": "aaaa",
+      "email": "aaa@aaa.com"
+    },
+    {
+      "id": "7",
+      "name": "Alice",
+      "occupation": "Gato",
+      "email": "alice@gato.pt"
+    }
+  ]
+}
