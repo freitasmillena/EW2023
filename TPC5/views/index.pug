@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  header.w3-container.w3-center.w3-2021-amethyst-orchid
+    h1
+      b To do list
+  main.w3-center
+    .w3-cell-row
+      .w3-container.w3-cell(style='width:50%')
+        h3.w3-margin-top(style='color:rgb(130, 68, 164)')
+          b Add Task
+        form.w3-container.w3-center.w3-margin(action='/tasks/registo' method='POST')
+          input(type='hidden' name='id' value=mT)
+          label
+            p.w3-2021-amethyst-orchid.w3-center.w3-round
+              b Task Description
+          input.w3-input.w3-border.w3-margin-bottom.w3-center.w3-round(type='text' name='what')
+          label
+            p.w3-2021-amethyst-orchid.w3-round
+              b Who is responsible
+          select.w3-select.w3-border.w3-round(name='who')
+            option.w3-center(value='' disabled selected) Choose person
+            each user in u
+              option.w3-center #{user.name}
+          label
+            p.w3-2021-amethyst-orchid.w3-round
+              b Due date
+          input.w3-input.w3-border.w3-round.w3-center(type='date' name='dueDate')
+          button.w3-btn.w3-round.w3-2021-amethyst-orchid.w3-margin-top(type='submit') Add Task
+
+      .w3-container.w3-cell(style='width:50%')
+        h3.w3-margin-top(style='color:rgb(130, 68, 164)')
+          b Add User
+        form.w3-container.w3-center.w3-margin(action='/users/registo' method='POST')
+          input(type='hidden' name='id' value=mU)
+          label
+            p.w3-2021-amethyst-orchid.w3-center.w3-round
+              b Name
+          input.w3-input.w3-border.w3-margin-bottom.w3-center.w3-round(type='text' name='name')
+          label
+            p.w3-2021-amethyst-orchid.w3-round
+              b Occupation
+          input.w3-input.w3-border.w3-margin-bottom.w3-center.w3-round(type='text' name='occupation')
+          label
+            p.w3-2021-amethyst-orchid.w3-round
+              b E-mail
+          input.w3-input.w3-border.w3-round.w3-center(type='email' name='email')
+          button.w3-btn.w3-round.w3-2021-amethyst-orchid.w3-margin-top(type='submit') Add User
+    .w3-cell-row.w3-margin-top
+      .w3-container.w3-cell(style='width:50%')
+        .w3-container.w3-center.w3-2021-amethyst-orchid.w3-round.w3-margin-bottom
+          h3 Tasks to be done
+          each task in t 
+            if !("done" in task)
+              .w3-container.w3-center.w3-2021-amethyst-orchid.w3-round.w3-margin-top
+                p.w3-right-align
+                  a(href='/tasks/edit/' +task.id)
+                    b Edit | 
+                  a(href='/tasks/delete/' +task.id)
+                    b Delete |
+                  a(href='/tasks/done/' +task.id)
+                    b Done
+                p
+                  b Description: #{task.what}
+                p
+                  b Responsible: #{task.who}
+                p
+                  b Due date: #{task.dueDate}
+      .w3-container.w3-cell(style='width:50%')
+        .w3-container.w3-center.w3-2021-amethyst-orchid.w3-round.w3-margin-bottom
+          h3 Tasks done
+          each task in t 
+            if "done" in task
+              .w3-container.w3-center.w3-2021-amethyst-orchid.w3-round.w3-margin-top
+                p.w3-right-align 
+                  a(href='/tasks/delete/' +task.id)
+                    b Delete
+                p
+                  b Description: #{task.what}
+                p
+                  b Responsible: #{task.who}
+                p
+                  b Due date: #{task.date}
+  footer.w3-container.w3-center.w3-2021-amethyst-orchid.w3-margin-top
+    h5 Created by 
+      b Millena Freitas
+
+             
+
+            
